@@ -3,4 +3,14 @@ name = "pythonproject"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "gitpython>=3.1.46",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.2.20",
+    "langchain-huggingface>=1.2.1",
+    "langchain-text-splitters>=1.1.1",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"

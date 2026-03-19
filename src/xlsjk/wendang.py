@@ -11,7 +11,7 @@ VECTOR_DB_SAVE_PATH = "./vector_db/medical_guidelines_faiss"
 
 # ===================== 2. 嵌入模型配置=====================
 # 中文医疗适配的嵌入模型（m3e-base）
-EMBEDDING_MODEL_NAME = "m3e-base-medical"
+EMBEDDING_MODEL_NAME = "shibing624/text2vec-base-chinese"
 # 可选：配置 HuggingFace 镜像
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
@@ -25,7 +25,7 @@ def load_guidelines_as_whole_docs():
     # 2. 从 Git 拉语料库
     if not os.listdir(GUIDELINES_DOWNLOAD_PATH):
         # 替换为你实际的医疗指南 Git 仓库地址
-        Repo.clone_from("https://github.com/scienceasdf/medical-guidelines-cn", GUIDELINES_DOWNLOAD_PATH)
+        Repo.clone_from("https://github.com/ChiryuhLii/my-TCM-textbook-website.git", GUIDELINES_DOWNLOAD_PATH)
 
     # 3. 遍历目录，每篇文献作为一个 Document
     docs = []

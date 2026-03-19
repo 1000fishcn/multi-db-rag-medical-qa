@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 
 # ===================== 1. 路径配置 =====================
 
-GUIDELINES_DOWNLOAD_PATH = "./medical_guidelines_cn"
+GUIDELINES_DOWNLOAD_PATH = "./zywbxlk"
 VECTOR_DB_SAVE_PATH = "./vector_db/medical_guidelines_faiss"
 
 # ===================== 2. 嵌入模型配置=====================

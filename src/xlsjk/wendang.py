@@ -72,10 +72,3 @@ def build_or_load_vector_db():
 # 测试运行
 if __name__ == "__main__":
     db = build_or_load_vector_db()
-    # 简单测试检索
-    query = "高血压的诊疗标准"
-    results = db.similarity_search(query, k=3)
-    print("\n检索结果示例：")
-    for res in results:
-        print(f"- 来源文献：{res.metadata['file_name']}")
-        print(f"  内容片段：{res.page_content[:100]}...\n")

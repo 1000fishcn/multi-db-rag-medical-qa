@@ -72,3 +72,4 @@ def build_or_load_vector_db():
 # 测试运行
 if __name__ == "__main__":
     db = build_or_load_vector_db()
+

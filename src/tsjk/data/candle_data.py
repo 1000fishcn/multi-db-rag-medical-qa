@@ -36,7 +36,9 @@ def process_wide_csv_to_triple():
 
     # 读取宽表
 
-    df_wide = pd.read_csv(WIDE_CSV_PATH, encoding="utf-8-sig")
+    with open(WIDE_CSV_PATH, 'r', encoding='gbk', errors='replace') as f:
+        # 从已打开的文件对象读取CSV
+        df_wide = pd.read_csv(f)
 
 
     # 遍历每行，生成三元组
